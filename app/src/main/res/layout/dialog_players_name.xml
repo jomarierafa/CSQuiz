@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+        <ImageView
+            android:src="@drawable/dialog"
+            android:scaleType="fitXY"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignTop="@+id/dialog_players_name"
+            android:layout_alignBottom="@id/dialog_players_name"
+            android:layout_alignLeft="@id/dialog_players_name"
+            android:layout_alignRight="@id/dialog_players_name" />
+        <LinearLayout
+            android:paddingTop="@dimen/_10sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            android:paddingLeft="@dimen/_15sdp"
+            android:paddingRight="@dimen/_15sdp"
+            android:id="@+id/dialog_players_name"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/playersName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/input_name"
+                    android:layout_gravity="center"
+                    android:textSize="@dimen/_20sdp"
+                    android:textStyle="bold"/>
+
+                <View android:id="@+id/titleDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_3sdp"
+                    android:background="@drawable/menubutton"/>
+
+                <EditText
+                    android:textStyle="italic"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/player1"
+                    android:textSize="@dimen/_25sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:inputType="textPersonName" />
+
+                <EditText
+                    android:textStyle="italic"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_25sdp"
+                    android:id="@+id/player2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:inputType="textPersonName" />
+
+                <Button
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:id="@+id/btn_DualStart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wrongbutton"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textSize="@dimen/_30sdp"
+                    android:text="@string/btn_startgame"
+                    android:layout_weight="0.06" />
+
+        </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:src="@drawable/dialog"
+        android:scaleType="fitXY"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/dialog_direction"
+        android:layout_alignBottom="@id/dialog_direction"
+        android:layout_alignLeft="@id/dialog_direction"
+        android:layout_alignRight="@id/dialog_direction" />
+    <LinearLayout
+        android:id="@+id/dialog_direction"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_15sdp"
+        android:weightSum="1">
+        <ScrollView
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_200sdp">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/txtDirection"
+                    android:gravity="center_horizontal"
+                    android:text="Follow the steps procedure to connect both device perfectly"
+                    android:textSize="@dimen/_18sdp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="@dimen/_3sdp"/>
+                <TextView
+                    android:id="@+id/step1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Step1 - Open Bluettoh visibility by clicking the visibility button (Left Side)"
+                    android:textSize="@dimen/_20sdp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginBottom="@dimen/_3sdp"/>
+                <TextView
+                    android:id="@+id/step2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Step2 - Search the other visible device by clicking search button (Right Side)"
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:textColor="@android:color/white"/>
+                <TextView
+                    android:id="@+id/step3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Step3 - Tap the other device on the list."
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:textColor="@android:color/white"/>
+                <TextView
+                    android:id="@+id/step4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Step4 - When both device already tap each other, one player can start the game."
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:textColor="@android:color/white"/>
+                <Button
+                    android:padding="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:id="@+id/btn_ok"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wrongbutton"
+                    android:layout_marginTop="10dp"
+                    android:textSize="@dimen/_25sdp"
+                    android:text="OK"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:layout_weight="0.06" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingRight="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    android:paddingLeft="@dimen/_10sdp"
+    android:splitMotionEvents="false"
+    android:background="@drawable/background2">
+    <Button
+        android:onClick="quit"
+        android:textColor="@android:color/black"
+        android:background="@drawable/wrongbutton"
+        android:layout_width="@dimen/_50sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:textSize="@dimen/_10sdp"
+        android:text="Quit"
+        android:layout_marginBottom="@dimen/_35sdp"/>
+    <LinearLayout
+        android:splitMotionEvents="false"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_weight="1"
+        android:layout_height="0px">
+        <TextView
+            android:layout_marginRight="@dimen/_5sdp"
+            android:id="@+id/textView7"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:text="@string/subject1"
+            android:textSize="@dimen/_18sdp"
+            android:textColor="@color/color4"
+            android:gravity="center" />
+        <Button
+            android:id="@+id/btn1_1"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_height="match_parent"
+            android:onClick="sub1"
+            android:text="@string/level_easy"
+            android:textSize="@dimen/_20sdp"
+            android:background="@drawable/menubutton" />
+        <Button
+            android:id="@+id/btn1_2"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:onClick="sub1"
+            android:text="@string/level_medium"
+            android:textSize="@dimen/_20sdp"
+            android:background="@drawable/menubutton" />
+        <Button
+            android:id="@+id/btn1_3"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:onClick="sub1"
+            android:text="@string/level_hard"
+            android:textSize="@dimen/_20sdp"
+            android:background="@drawable/menubutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:splitMotionEvents="false"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_weight="1"
+        android:layout_height="0px">
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/subject2"
+            android:textColor="@color/color4"
+            android:textSize="@dimen/_18sdp" />
+
+        <Button
+            android:id="@+id/btn2_1"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_height="match_parent"
+            android:onClick="sub2"
+            android:text="@string/level_easy"
+            android:textSize="@dimen/_20sdp"
+            android:background="@drawable/menubutton" />
+        <Button
+            android:id="@+id/btn2_2"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:onClick="sub2"
+            android:text="@string/level_medium"
+            android:textSize="@dimen/_20sdp"
+            android:background="@drawable/menubutton" />
+        <Button
+            android:id="@+id/btn2_3"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:onClick="sub2"
+            android:text="@string/level_hard"
+            android:textSize="@dimen/_20sdp"
+            android:background="@drawable/menubutton" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:splitMotionEvents="false"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_marginBottom="@dimen/_8sdp"
+        android:layout_weight="1"
+        android:layout_height="0px">
+        <TextView
+            android:layout_marginRight="@dimen/_5sdp"
+            android:id="@+id/textView8"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:text="@string/subject3"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/color4"
+            android:gravity="center" />
+        <Button
+            android:id="@+id/btn3_1"
+            android:layout_marginRight="@dimen/_18sdp"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:onClick="sub3"
+            android:text="@string/level_easy"
+            android:textSize="@dimen/_20sdp"
+            android:background="@drawable/menubutton" />
+        <Button
+            android:id="@+id/btn3_2"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:onClick="sub3"
+            android:text="@string/level_medium"
+            android:textSize="@dimen/_20sdp"
+            android:background="@drawable/menubutton" />
+        <Button
+            android:id="@+id/btn3_3"
+            android:layout_weight="1"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:onClick="sub3"
+            android:text="@string/level_hard"
+            android:textSize="@dimen/_20sdp"
+            android:background="@drawable/menubutton" />
+        </LinearLayout>
+</LinearLayout>

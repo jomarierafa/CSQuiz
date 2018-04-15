@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/launcher"
+    tools:context="com.example.jomarie.csquiz.LoadingScreen">
+
+    <ImageView
+        android:layout_centerInParent="true"
+        android:id="@+id/imagebackground"
+        android:src="@drawable/logo"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:scaleType="fitXY"/>
+
+    <ProgressBar
+        android:indeterminateDrawable="@drawable/costumprogressbar"
+        android:id="@id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/_13sdp"/>
+</RelativeLayout>

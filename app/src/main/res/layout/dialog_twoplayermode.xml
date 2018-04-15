@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:src="@drawable/dialog"
+        android:scaleType="fitXY"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/dialog_score"
+        android:layout_alignBottom="@id/dialog_score"
+        android:layout_alignLeft="@id/dialog_score"
+        android:layout_alignRight="@id/dialog_score" />
+    <LinearLayout
+        android:id="@+id/dialog_score"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_12sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:paddingLeft="@dimen/_15sdp">
+        <TextView
+            android:id="@+id/scoreMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 player mode"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"/>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_3sdp"
+            android:background="@drawable/menubutton"/>
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/LinearLayout02"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_width="fill_parent"
+            android:splitMotionEvents="false"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp">
+
+
+            <ImageButton
+                android:scaleType="fitXY"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/btnbluetooth"
+                android:id="@+id/btnBluetooth"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1"
+                android:layout_marginBottom="@dimen/_5sdp" />
+
+            <ImageButton
+                android:id="@+id/btnPhone"
+                android:scaleType="fitXY"
+                android:src="@drawable/phone"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="1" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

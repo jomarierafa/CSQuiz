@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="@dimen/_15sdp"
+    android:splitMotionEvents="false"
+    android:background="@drawable/background2">
+    <RelativeLayout
+        android:id="@+id/scrollViewBackground"
+        android:background="@drawable/customtextview"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:layout_marginRight="@dimen/_10sdp">
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:padding="@dimen/_5sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/checkBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="numSubCheck"
+                    android:text="Artificial Intelligence (AIntelligence)"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:buttonTint="@android:color/white" />
+                <CheckBox
+                    android:id="@+id/checkBox2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="numSubCheck"
+                    android:text="Computer Organization and Assembly Language Programming (COA)"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:buttonTint="@android:color/white" />
+                <CheckBox
+                    android:id="@+id/checkBox3"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="numSubCheck"
+                    android:text="Database Management System (DBMS)"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:buttonTint="@android:color/white" />
+                <CheckBox
+                    android:id="@+id/checkBox4"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="numSubCheck"
+                    android:text="Design and Analysis of Algorithm (Algo)"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:buttonTint="@android:color/white" />
+                <CheckBox
+                    android:id="@+id/checkBox5"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="numSubCheck"
+                    android:text="Logic Circuit"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:buttonTint="@android:color/white" />
+                <CheckBox
+                    android:id="@+id/checkBox6"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="numSubCheck"
+                    android:text="Open Source Technology (OST)"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:buttonTint="@android:color/white" />
+                <CheckBox
+                    android:id="@+id/checkBox7"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="numSubCheck"
+                    android:text="Principle of Programming Languages (ProgrammingLang)"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:buttonTint="@android:color/white" />
+                <CheckBox
+                    android:id="@+id/checkBox8"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="numSubCheck"
+                    android:text="Web Programming (WebProg)"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:buttonTint="@android:color/white" />
+                <CheckBox
+                    android:id="@+id/checkbox9"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="numSubCheck"
+                    android:text="Automata"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:buttonTint="@android:color/white" />
+                <CheckBox
+                    android:id="@+id/checkBox10"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="numSubCheck"
+                    android:text="Cisco"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:buttonTint="@android:color/white" />
+                <CheckBox
+                    android:id="@+id/checkBox11"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="numSubCheck"
+                    android:text="Introduction to Computer Science (Introductiontocs)"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:buttonTint="@android:color/white" />
+                <CheckBox
+                    android:id="@+id/checkbox12"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_40sdp"
+                    android:onClick="numSubCheck"
+                    android:text="Object Oriented Programming (OOP)"
+                    android:textColor="@android:color/white"
+                    android:textSize="@dimen/_15sdp"
+                    app:buttonTint="@android:color/white" />
+            </LinearLayout>
+        </ScrollView>
+
+        <TextView
+            android:id="@+id/info"
+            android:visibility="invisible"
+            android:padding="@dimen/_10sdp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/_20sdp"
+            android:text="In the DualPlayer Mode all available courses are included."/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:paddingBottom="@dimen/_30sdp"
+        android:paddingTop="@dimen/_20sdp"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <TextView
+            android:textColor="@color/color4"
+            android:id="@+id/reqCourses"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:textSize="@dimen/_15sdp" />
+            <RelativeLayout
+                android:id="@+id/spinnerBackground"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="3"
+                android:background="@drawable/customtextview">
+                <Spinner
+                    android:popupBackground="@drawable/toast_frame"
+                    android:id="@+id/spinGameMode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:background="@android:color/transparent"
+                    android:hint="Type of Quiz"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_7sdp"
+                    android:spinnerMode="dropdown"/>
+                <ImageView
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/ic_arrow_down" />
+
+            </RelativeLayout>
+
+
+        <Button
+            android:textColor="@color/color1"
+            android:id="@+id/startNormal"
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="5"
+            android:onClick="doneSelection"
+            android:text="@string/SelectCourses"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_15sdp"
+            android:background="@drawable/menubutton"
+            android:layout_marginTop="17dp" />
+        </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/background2">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <Button
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:onClick="quitB"
+            android:background="@drawable/wrongbutton"
+            android:textSize="@dimen/_15sdp"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="Back" />
+        <Button
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:onClick="showDirection"
+            android:background="@drawable/correctbutton"
+            android:textSize="@dimen/_15sdp"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_27sdp"
+            android:enabled="true"
+            android:gravity="center"
+            android:text="Help" />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/pairing"
+            android:padding="@dimen/_15sdp"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal">
+            <ListView
+                android:layout_marginTop="@dimen/_20sdp"
+                android:padding="@dimen/_10sdp"
+                android:layout_weight="5"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:id="@+id/lvNewDevices"
+                android:background="@drawable/customtextview"
+                android:layout_marginRight="@dimen/_5sdp"/>
+
+                <LinearLayout
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_weight="4"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                        <Button
+                            android:visibility="invisible"
+                            android:textSize="@dimen/_20sdp"
+                            android:background="@drawable/menubutton"
+                            android:id="@+id/btnOnOff"
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:text="ON/OFF" />
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0px"
+                            android:layout_weight="2"
+                            android:orientation="vertical"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:layout_marginBottom="@dimen/_5sdp">
+                                <TextView
+                                    android:textSize="@dimen/_15sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0px"
+                                    android:layout_weight="2"
+                                    android:gravity="center"
+                                    android:textStyle="bold"
+                                    android:text="Personal Record"/>
+                                <TextView
+                                    android:id="@+id/win"
+                                    android:textSize="@dimen/_20sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0px"
+                                    android:layout_weight="1"
+                                    android:text="Win:   0"/>
+                                <TextView
+                                    android:id="@+id/lose"
+                                    android:textSize="@dimen/_20sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0px"
+                                    android:layout_weight="1"
+                                    android:text="Lose:  0"/>
+                                <TextView
+                                    android:id="@+id/draw"
+                                    android:textSize="@dimen/_20sdp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0px"
+                                    android:layout_weight="1"
+                                    android:text="Draw: 0"/>
+                        </LinearLayout>
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_weight="1"
+                            android:layout_width="match_parent"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_height="0px">
+                            <ImageButton
+                                android:padding="@dimen/_20sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_visible"
+                                android:textSize="@dimen/_20sdp"
+                                android:background="@drawable/menubutton"
+                                android:id="@+id/btnDiscoverabilityOn"
+                                android:layout_width="0px"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:onClick="btnDiscoverabilityOn"
+                                android:text="Ready For Challenge"
+                                android:layout_marginRight="@dimen/_5sdp"/>
+                            <ImageButton
+                                android:padding="@dimen/_20sdp"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_search"
+                                android:textSize="@dimen/_20sdp"
+                                android:background="@drawable/menubutton"
+                                android:id="@+id/btnDiscoverDevices"
+                                android:layout_width="0px"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:onClick="btnDiscover"
+                                android:text="Search" />
+                        </LinearLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="0px"
+                            android:layout_weight="1">
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Wait for Opponent..."
+                                android:gravity="center"
+                                android:textSize="@dimen/_15sdp"
+                                android:textStyle="italic"
+                                android:id="@+id/loadingText"/>
+                            <Button
+                                android:textSize="@dimen/_20sdp"
+                                android:layout_marginBottom="@dimen/_5sdp"
+                                android:background="@drawable/menubutton"
+                                android:id="@+id/btnStartConnection"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:text="Start" />
+                        </RelativeLayout>
+                </LinearLayout>
+       </LinearLayout>
+
+
+        <LinearLayout
+            android:visibility="invisible"
+            android:background="@drawable/background2"
+            android:id="@+id/dualgamemode"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentRight="true">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:splitMotionEvents="false">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:layout_marginLeft="@dimen/_5sdp">
+                                <ProgressBar
+                                    android:progressDrawable="@drawable/horizontalprogressbar"
+                                    android:id="@+id/bmeter"
+                                    android:layout_width="match_parent"
+                                    android:layout_marginTop="@dimen/_10sdp"
+                                    android:layout_height="@dimen/_10sdp"
+                                    style="@android:style/Widget.ProgressBar.Horizontal" />
+                            <LinearLayout
+                                android:layout_centerHorizontal="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="@dimen/_60sdp"
+                                android:orientation="vertical">
+                                <ImageView
+                                    android:layout_weight="4"
+                                    android:id="@+id/bTimerIcon"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="0px"
+                                    android:src="@drawable/ic_timer" />
+                                <TextView
+                                    android:layout_weight="2"
+                                    android:id="@+id/btimer"
+                                    android:layout_width="@dimen/_100sdp"
+                                    android:layout_height="0px"
+                                    android:layout_gravity="center"
+                                    android:gravity="center"
+                                    android:textSize="@dimen/_15sdp"
+                                    android:textColor="@android:color/white"
+                                    android:text="@string/Ttimer" />
+                                <TextView
+                                    android:layout_gravity="center"
+                                    android:layout_weight="2"
+                                    android:id="@+id/bcourse"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="0px"
+                                    android:textSize="@dimen/_15sdp"
+                                    android:textColor="@android:color/white"
+                                    android:text="CourseName"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                        <TextView
+                                            android:background="@drawable/correctbutton"
+                                            android:id="@+id/bscore"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:text="@string/score"
+                                            android:textSize="@dimen/_15sdp"
+                                            android:paddingTop="@dimen/_2sdp"
+                                            android:paddingLeft="@dimen/_20sdp"
+                                            android:paddingBottom="@dimen/_3sdp"
+                                            android:paddingRight="@dimen/_20sdp"
+                                            android:layout_marginTop="@dimen/_3sdp"
+                                            android:gravity="center" />
+                                        <TextView
+                                            android:textSize="@dimen/_10sdp"
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="You"/>
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:layout_alignParentRight="true"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+                                        <TextView
+                                            android:background="@drawable/wrongbutton"
+                                            android:id="@+id/bEnemyScore"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textStyle="bold"
+                                            android:text="@string/score"
+                                            android:textSize="@dimen/_15sdp"
+                                            android:paddingTop="@dimen/_3sdp"
+                                            android:paddingLeft="@dimen/_20sdp"
+                                            android:paddingBottom="@dimen/_3sdp"
+                                            android:paddingRight="@dimen/_20sdp"
+                                            android:layout_marginTop="@dimen/_2sdp"
+                                            android:gravity="center" />
+                                        <TextView
+                                            android:textSize="@dimen/_10sdp"
+                                            android:gravity="center"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:text="Challenger"/>
+                                </LinearLayout>
+
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingRight="@dimen/_10sdp"
+                            android:paddingLeft="@dimen/_10sdp"
+                            android:paddingTop="@dimen/_70sdp"
+                            android:paddingBottom="@dimen/_10sdp">
+
+
+                                <LinearLayout
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent">
+
+                                        <TextView
+                                            android:id="@+id/bquestion"
+                                            android:layout_width="0px"
+                                            android:layout_height="match_parent"
+                                            android:layout_marginRight="@dimen/_8sdp"
+                                            android:layout_weight="1"
+                                            android:background="@drawable/customtextview"
+                                            android:gravity="center"
+                                            android:padding="@dimen/_5sdp"
+                                            android:text="@string/question"
+                                            android:textColor="@android:color/white"
+                                            android:textSize="@dimen/_20sdp" />
+
+                                        <LinearLayout
+                                            android:splitMotionEvents="false"
+                                            android:orientation="vertical"
+                                            android:layout_width="0px"
+                                            android:layout_height="match_parent"
+                                            android:layout_weight="1">
+                                                <Button
+                                                    android:background="@drawable/menubutton"
+                                                    android:id="@+id/bchoice1"
+                                                    android:textSize="@dimen/_20sdp"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0px"
+                                                    android:layout_weight="1"
+                                                    android:layout_marginBottom="@dimen/_4sdp"
+                                                    android:onClick="choose"
+                                                    android:text="@string/a" />
+
+                                                <Button
+                                                    android:id="@+id/bchoice2"
+                                                    android:textSize="@dimen/_20sdp"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0px"
+                                                    android:layout_marginBottom="@dimen/_4sdp"
+                                                    android:layout_weight="1"
+                                                    android:background="@drawable/menubutton"
+                                                    android:onClick="choose"
+                                                    android:text="@string/b" />
+
+                                                <Button
+                                                    android:background="@drawable/menubutton"
+                                                    android:id="@+id/bchoice3"
+                                                    android:textSize="@dimen/_20sdp"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0px"
+                                                    android:layout_weight="1"
+                                                    android:layout_marginBottom="@dimen/_4sdp"
+                                                    android:onClick="choose"
+                                                    android:text="@string/c" />
+
+                                                <Button
+                                                    android:background="@drawable/menubutton"
+                                                    android:id="@+id/bchoice4"
+                                                    android:textSize="@dimen/_20sdp"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="0px"
+                                                    android:layout_weight="1"
+                                                    android:onClick="choose"
+                                                    android:text="@string/d" />
+                                        </LinearLayout>
+                                </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:paddingLeft="@dimen/_10sdp">
+
+                                <LinearLayout
+                                    android:id="@+id/blifeline"
+                                    android:layout_marginTop="@dimen/_40sdp"
+                                    android:splitMotionEvents="false"
+                                    android:orientation="horizontal"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:paddingLeft="@dimen/_15sdp">
+                                        <ImageButton
+                                            android:src="@drawable/ic_tap_button"
+                                            android:background="@drawable/lifelinebutton"
+                                            android:id="@+id/bdouble"
+                                            android:layout_marginRight="@dimen/_3sdp"
+                                            android:layout_width="@dimen/_40sdp"
+                                            android:layout_height="@dimen/_40sdp"
+                                            android:padding="@dimen/_8sdp"
+                                            android:scaleType="fitXY"
+                                            android:onClick="doubleTip"
+                                            android:text="dtip" />
+                                        <ImageButton
+                                            android:src="@drawable/ic_minus2"
+                                            android:background="@drawable/lifelinebutton"
+                                            android:id="@+id/bhalf"
+                                            android:layout_marginRight="@dimen/_3sdp"
+                                            android:layout_width="@dimen/_40sdp"
+                                            android:layout_height="@dimen/_40sdp"
+                                            android:padding="@dimen/_8sdp"
+                                            android:scaleType="fitXY"
+                                            android:onClick="twoChoices"
+                                            android:text="50/50" />
+                                        <ImageButton
+                                            android:src="@drawable/ic_check"
+                                            android:background="@drawable/lifelinebutton"
+                                            android:id="@+id/bcorrect"
+                                            android:layout_width="@dimen/_40sdp"
+                                            android:layout_height="@dimen/_40sdp"
+                                            android:padding="@dimen/_8sdp"
+                                            android:scaleType="fitXY"
+                                            android:onClick="corectAns" />
+                                </LinearLayout>
+
+                        </LinearLayout>
+                </RelativeLayout>
+
+        </LinearLayout>
+
+</RelativeLayout>

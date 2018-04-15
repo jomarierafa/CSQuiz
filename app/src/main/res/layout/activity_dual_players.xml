@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background2"
+    android:paddingLeft="@dimen/_2sdp"
+    android:paddingRight="@dimen/_2sdp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/color4"
+                    android:id="@+id/mplayer1course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course1"
+                    android:textSize="@dimen/_20sdp"
+                    android:gravity="center_vertical" />
+                <TextView
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:id="@+id/p1ScoreView"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:text="0"
+                    android:background="@drawable/correctbutton"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:background="@drawable/customtextview"
+                android:id="@+id/p1question"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="6"
+                android:paddingRight="@dimen/_15sdp"
+                android:text="@string/question"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_17sdp"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_5sdp"/>
+            <LinearLayout
+                android:splitMotionEvents="false"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0px"
+                android:layout_marginRight="@dimen/_2sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0px"
+                    android:layout_marginBottom="@dimen/_3sdp">
+                    <Button
+                        android:background="@drawable/menubutton"
+                        android:id="@+id/p1chhoice1"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:onClick="chooseP1"
+                        android:text="@string/a"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_2sdp"/>
+                    <Button
+                        android:background="@drawable/menubutton"
+                        android:id="@+id/p1choice2"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:onClick="chooseP1"
+                        android:text="@string/b"
+                        android:textSize="@dimen/_15sdp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0px"
+                    android:layout_marginBottom="@dimen/_3sdp">
+                    <Button
+                        android:background="@drawable/menubutton"
+                        android:id="@+id/p1choice3"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:onClick="chooseP1"
+                        android:text="@string/c"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_2sdp"/>
+                    <Button
+                        android:background="@drawable/menubutton"
+                        android:id="@+id/p1choice4"
+                        android:layout_width="0px"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:onClick="chooseP1"
+                        android:text="@string/d"
+                        android:textSize="@dimen/_15sdp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:rotation="180">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/color4"
+                    android:id="@+id/mplayer2course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="course2"
+                    android:textSize="@dimen/_20sdp"
+                    android:gravity="center_vertical" />
+                <TextView
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:id="@+id/p2ScoreView"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/correctbutton"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="0" />
+            </RelativeLayout>
+
+            <TextView
+                android:background="@drawable/customtextview"
+                android:id="@+id/p2question"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:paddingRight="@dimen/_15sdp"
+                android:text="@string/question"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_17sdp" />
+
+            <LinearLayout
+                android:splitMotionEvents="false"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0px"
+                android:layout_marginRight="@dimen/_2sdp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0px"
+                    android:layout_marginBottom="@dimen/_3sdp">
+                    <Button
+                        android:background="@drawable/menubutton"
+                        android:id="@+id/p2choice1"
+                        android:layout_weight="1"
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:onClick="chooseP2"
+                        android:text="@string/a"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_2sdp"/>
+                    <Button
+                        android:background="@drawable/menubutton"
+                        android:id="@+id/p2choice2"
+                        android:layout_weight="1"
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:onClick="chooseP2"
+                        android:text="@string/b"
+                        android:textSize="@dimen/_15sdp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0px"
+                    android:layout_marginBottom="@dimen/_3sdp">
+                    <Button
+                        android:background="@drawable/menubutton"
+                        android:id="@+id/p2choice3"
+                        android:layout_weight="1"
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:onClick="chooseP2"
+                        android:text="@string/c"
+                        android:textSize="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_2sdp"/>
+                    <Button
+                        android:background="@drawable/menubutton"
+                        android:id="@+id/p2choice4"
+                        android:layout_weight="1"
+                        android:layout_width="0px"
+                        android:layout_height="match_parent"
+                        android:onClick="chooseP2"
+                        android:text="@string/d"
+                        android:textSize="@dimen/_15sdp" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+    <io.netopen.hotbitmapgg.library.view.RingProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_centerInParent="true"
+        app:max="100"
+        app:ringColor="@color/color4"
+        app:ringProgressColor="@color/color4"
+        app:ringWidth="@dimen/_1sdp"
+        app:style="FILL"
+        app:textColor="@color/color3"
+        app:textIsShow="true"
+        app:textSize="@dimen/_8sdp"
+        />
+
+    <ProgressBar
+        android:progressDrawable="@drawable/horizontalprogressbar"
+        android:id="@+id/meter"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="@dimen/_3sdp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:rotation="-90"
+        />
+</RelativeLayout>

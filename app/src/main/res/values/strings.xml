@@ -1,0 +1,73 @@
+<resources>
+    <string name="app_name">CSQUIZ</string>
+    <string name="btn_leaderboard">Leader Board</string>
+    <string name="btn_startgame">Start</string>
+    <string name="btn_option">Settings</string>
+    <string name="btn_quickgame">Quick game</string>
+    <string name="btn_timelimit">Time limit</string>
+    <string name="btn_dualplayer">2 player</string>
+    <string name="btn_normal">Survival</string>
+    <string name="btn1_level1">50</string>
+    <string name="btn2_level1">50</string>
+    <string name="btn3_level1">50</string>
+    <string name="btn4_level1">50</string>
+    <string name="btn5_level1">50</string>
+    <string name="btn1_level2">-//-</string>
+    <string name="btn2_level2">-//-</string>
+    <string name="btn3_level2">-//-</string>
+    <string name="btn4_level2">-//-</string>
+    <string name="btn5_level2">-//-</string>
+    <string name="btn1_level3">-//-</string>
+    <string name="btn2_level3">-//-</string>
+    <string name="btn3_level3">-//-</string>
+    <string name="btn4_level3">-//-</string>
+    <string name="btn5_level3">-//-</string>
+    <string name="btn1_level4">-//-</string>
+    <string name="btn2_level4">-//-</string>
+    <string name="btn3_level4">-//-</string>
+    <string name="btn4_level4">-//-</string>
+    <string name="btn5_level4">-//-</string>
+    <string name="btn1_level5">-//-</string>
+    <string name="btn2_level5">-//-</string>
+    <string name="btn3_level5">-//-</string>
+    <string name="btn4_level5">-//-</string>
+    <string name="btn5_level5">-//-</string>
+    <string name="subject1">subject1</string>
+    <string name="subject2">subject2</string>
+    <string name="subject3">subject3</string>
+    <string name="subject4">subject4</string>
+    <string name="subject5">subject5</string>
+    <string name="score">0</string>
+    <string name="numOfSub">5 left</string>
+    <string name="btnstart">Start</string>
+    <string name="a">A</string>
+    <string name="b">B</string>
+    <string name="c">C</string>
+    <string name="d">D</string>
+    <string name="question">Question</string>
+    <string name="level_easy">easy</string>
+    <string name="level_medium">medium</string>
+    <string name="level_hard">hard</string>
+    <string name="Ttimer">7:45:00</string>
+    <string name="input_name">Input Name</string>
+    <string name="title_activity_leaderboard"></string>
+    <string name="section_format">Hello World from section: %1$d</string>
+    <string name="leaderboard1">Survival</string>
+    <string name="leaderboard2">TimeLimit</string>
+    <string name="scoredialog">Score</string>
+    <string name="submit">Submit</string>
+    <string name="cancel">Cancel</string>
+    <string name="tapicon">Icons made by Freepik from www.flaticon.com is licensed by CC 3.0 BY</string>
+    <string name="SelectCourses">Play Random</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="AboutthisApplication">CSQuiz is an Android Mobile quiz game design for Computer Science Student and those who are interested in this field of Computer Science. This mobile application is for educational purpose only.</string>
+
+    <string name="accept">Accept</string>
+    <string name="eula_string">
+        COPYRIGHT:
+    \nUsers are free to download and use this mobile quiz game app for informational, educational and research purposes only.
+        \n\nDISCLAIMER:
+    \This mobile app is intended for informational, educational and research purposes only. It is not, and is not intended, for use in the commercial purposes.We do not own the soundtrack and fonts</string>
+</resources>

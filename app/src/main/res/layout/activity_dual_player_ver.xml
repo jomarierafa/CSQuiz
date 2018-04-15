@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background2"
+    android:paddingLeft="@dimen/_2sdp"
+    android:paddingRight="@dimen/_2sdp">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/color4"
+                    android:id="@+id/player1course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Course1"
+                    android:textSize="@dimen/_20sdp"
+                    android:gravity="center_vertical" />
+                <TextView
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:id="@+id/p1ScoreViewVer"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:gravity="center"
+                    android:textSize="@dimen/_10sdp"
+                    android:textStyle="bold"
+                    android:text="0"
+                    android:background="@drawable/correctbutton"
+                    android:layout_alignParentRight="true"/>
+            </RelativeLayout>
+
+
+            <TextView
+                android:background="@drawable/customtextview"
+                android:id="@+id/p1questionVer"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="6"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:paddingRight="@dimen/_15sdp"
+                android:text="@string/question"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_17sdp"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/_5sdp"/>
+            <LinearLayout
+                android:splitMotionEvents="false"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0px"
+                android:layout_marginRight="@dimen/_2sdp">
+                <RadioGroup
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:layout_width="0px"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_3sdp">
+                    <RadioButton
+                        android:id="@+id/p1correct"
+                        android:checked="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:text=" TRUE"
+                        android:textSize="@dimen/_20sdp"/>
+                    <RadioButton
+                        android:id="@+id/p1incorrect"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:text=" FALSE"
+                        android:textSize="@dimen/_20sdp"/>
+                </RadioGroup>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0px"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_3sdp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1">
+                        <TextView
+                            android:visibility="invisible"
+                            android:id="@+id/p1correctWord"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Correct Answer"
+                            android:textColor="@color/color3"
+                            android:textSize="@dimen/_20sdp" />
+                        <TextView
+                            android:id="@+id/p1givenWord"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Given Answer"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_20sdp" />
+                    </RelativeLayout>
+                    <Button
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:id="@+id/p1submitVer"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:background="@drawable/menubutton"
+                        android:onClick="submitP1"
+                        android:text="Submit"
+                        android:textSize="@dimen/_20sdp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0px"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:rotation="180">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:textColor="@color/color4"
+                    android:id="@+id/player2course"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="course2"
+                    android:textSize="@dimen/_20sdp"
+                    android:gravity="center_vertical" />
+                <TextView
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:id="@+id/p2ScoreViewVer"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/correctbutton"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_10sdp"
+                    android:text="0" />
+            </RelativeLayout>
+
+            <TextView
+                android:background="@drawable/customtextview"
+                android:id="@+id/p2questionVer"
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_weight="6"
+                android:gravity="center"
+                android:paddingRight="@dimen/_15sdp"
+                android:text="@string/question"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_17sdp" />
+
+            <LinearLayout
+                android:splitMotionEvents="false"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_weight="4"
+                android:layout_height="0px"
+                android:layout_marginRight="@dimen/_2sdp">
+                <RadioGroup
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:orientation="vertical"
+                    android:layout_width="0px"
+                    android:layout_weight="2"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_3sdp">
+                    <RadioButton
+                        android:id="@+id/p2correct"
+                        android:checked="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:text=" TRUE"
+                        android:textSize="@dimen/_20sdp"/>
+                    <RadioButton
+                        android:id="@+id/p2incorrect"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:text=" FALSE"
+                        android:textSize="@dimen/_20sdp"/>
+                </RadioGroup>
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="0px"
+                    android:layout_weight="3"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/_3sdp">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1">
+                        <TextView
+                            android:visibility="invisible"
+                            android:id="@+id/p2correctWord"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Correct Answer"
+                            android:textColor="@color/color3"
+                            android:textSize="@dimen/_20sdp" />
+                        <TextView
+                            android:id="@+id/p2givenWord"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Given Answer"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/_20sdp" />
+                    </RelativeLayout>
+                    <Button
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:id="@+id/p2submitVer"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:background="@drawable/menubutton"
+                        android:onClick="submitP2"
+                        android:text="Submit"
+                        android:textSize="@dimen/_20sdp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <io.netopen.hotbitmapgg.library.view.RingProgressBar
+        android:id="@+id/progressbarVer"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_centerInParent="true"
+        app:max="100"
+        app:ringColor="@color/color3"
+        app:ringProgressColor="@color/color4"
+        app:ringWidth="@dimen/_1sdp"
+        app:style="FILL"
+        app:textColor="@color/color4"
+        app:textIsShow="true"
+        app:textSize="@dimen/_8sdp"
+        />
+
+    <ProgressBar
+        android:progressDrawable="@drawable/horizontalprogressbar"
+        android:id="@+id/meterVer"
+        android:layout_width="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_height="@dimen/_3sdp"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:rotation="-90"
+        />
+</RelativeLayout>

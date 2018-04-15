@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="@dimen/_60sdp"
+    android:paddingLeft="@dimen/_10sdp"
+    android:paddingRight="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_25sdp"
+    android:splitMotionEvents="false"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_weight="2"
+        android:layout_width="0px"
+        android:layout_height="match_parent">
+        <ImageView
+            android:visibility="invisible"
+            android:background="@drawable/lifelineused"
+            android:layout_gravity="bottom"
+            android:src="@drawable/ic_arrow_back"
+            android:padding="@dimen/_5sdp"
+            android:id="@+id/backButton"
+            android:onClick="back"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="@dimen/_40sdp"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:splitMotionEvents="false"
+        android:orientation="vertical" android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/_90sdp"
+        android:layout_weight="3">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/_5sdp">
+            <Button
+                android:textColor="@color/color1"
+                android:background="@drawable/menubutton"
+                android:id="@+id/survival"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text= "Survival"
+                android:onClick="leaderboard"
+                android:textSize="@dimen/_20sdp"
+                android:visibility="invisible"/>
+            <Button
+                android:textColor="@color/color1"
+                android:id="@+id/button4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="quick"
+                android:text="@string/btn_quickgame"
+                android:textSize="@dimen/_20sdp"
+                android:background="@drawable/menubutton"
+                android:visibility="invisible"/>
+            <Button
+                android:textColor="@color/color1"
+                android:background="@drawable/menubutton"
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="play"
+                android:text= "@string/btn_startgame"
+                android:textSize="@dimen/_20sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/_5sdp">
+            <Button
+                android:id="@+id/TimeLimit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/menubutton"
+                android:text="TimeLimit"
+                android:onClick="leaderboard"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/_20sdp"
+                android:visibility="invisible"/>
+            <Button
+                android:textColor="@color/color1"
+                android:id="@+id/button5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="normal"
+                android:text="@string/btn_normal"
+                android:textSize="@dimen/_20sdp"
+                android:background="@drawable/menubutton"
+                android:visibility="invisible"/>
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/menubutton"
+                android:onClick="leaderboards"
+                android:text="@string/btn_leaderboard"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/_18sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/_5sdp">
+            <Button
+                android:textColor="@color/color1"
+                android:id="@+id/button7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="timeLimit"
+                android:text="@string/btn_timelimit"
+                android:textSize="@dimen/_20sdp"
+                android:background="@drawable/menubutton"
+                android:visibility="invisible"/>
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/menubutton"
+                android:onClick="settings"
+                android:text="@string/btn_option"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/_20sdp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="1"
+            android:layout_marginBottom="@dimen/_5sdp">
+            <Button
+                android:textColor="@color/color1"
+                android:id="@+id/button6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:onClick="dualPlayer"
+                android:text="@string/btn_dualplayer"
+                android:textSize="@dimen/_20sdp"
+                android:background="@drawable/menubutton"
+                android:visibility="invisible"/>
+            <Button
+                android:id="@+id/help"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/menubutton"
+                android:text="Help"
+                android:onClick="helpdesk"
+                android:textColor="@color/color1"
+                android:textSize="@dimen/_20sdp" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

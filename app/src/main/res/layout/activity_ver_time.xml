@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:splitMotionEvents="false"
+    android:background="@drawable/background2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/_10sdp">
+
+        <TextView
+            android:background="@drawable/correctbutton"
+            android:id="@+id/tscoreVer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="@string/score"
+            android:textSize="@dimen/_15sdp"
+            android:paddingTop="@dimen/_3sdp"
+            android:paddingLeft="@dimen/_20sdp"
+            android:paddingBottom="@dimen/_3sdp"
+            android:paddingRight="@dimen/_20sdp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:gravity="center" />
+
+        <TextView
+            android:layout_marginTop="@dimen/_30sdp"
+            android:id="@+id/courseVer"
+            android:layout_width="@dimen/_225sdp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@android:color/white"
+            android:text="CourseName"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_70sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tquestionVer"
+                android:layout_width="0px"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:text="@string/question"
+                android:gravity="center"
+                android:textSize="@dimen/_20sdp"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:background="@drawable/customtextview"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="2">
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/tcorrectWord"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Correct Answer"
+                        android:textColor="@color/color3"
+                        android:textSize="@dimen/_20sdp" />
+                    <TextView
+                        android:id="@+id/tgivenWord"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:onClick="shuffle"
+                        android:text="Given Answer"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_20sdp" />
+
+                </RelativeLayout>
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0px"
+                    android:orientation="vertical"
+                    android:layout_weight="3"
+                    android:layout_marginBottom="@dimen/_10sdp">
+                    <RadioButton
+                        android:id="@+id/tradCorrectVer"
+                        android:checked="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:text=" True"
+                        android:textSize="@dimen/_25sdp"/>
+                    <RadioButton
+                        android:id="@+id/tincorrectVer"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:text=" False"
+                        android:textSize="@dimen/_25sdp"/>
+                </RadioGroup>
+
+                <Button
+                    android:id="@+id/submitVer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="2"
+                    android:background="@drawable/menubutton"
+                    android:onClick="submit"
+                    android:text=">>"
+                    android:textSize="@dimen/_15sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_10sdp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_15sdp">
+            <ImageView
+                android:id="@+id/verTimerIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_timer" />
+            <TextView
+                android:id="@+id/timerVer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="@dimen/_20sdp"
+                android:padding="@dimen/_2sdp"
+                android:textColor="@android:color/white"
+                android:text="@string/Ttimer" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/verTimelifelines"
+            android:splitMotionEvents="false"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_15sdp">
+
+            <ImageButton
+                android:id="@+id/tseeChoices"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:background="@drawable/lifelinebutton"
+                android:onClick="seeChoices"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_list"
+                android:text="dtip" />
+
+            <ImageButton
+                android:id="@+id/tdoubleTryVer"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:background="@drawable/lifelinebutton"
+                android:onClick="doubleTry"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_tap_button"
+                android:text="50/50" />
+
+            <ImageButton
+                android:id="@+id/tcorrectVer"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:background="@drawable/lifelinebutton"
+                android:onClick="correctAnswer"
+                android:padding="@dimen/_8sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_check" />
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:src="@drawable/dialog"
+        android:scaleType="fitXY"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_alignTop="@+id/dialog_direction"
+        android:layout_alignBottom="@id/dialog_direction"
+        android:layout_alignLeft="@id/dialog_direction"
+        android:layout_alignRight="@id/dialog_direction" />
+    <LinearLayout
+        android:id="@+id/dialog_direction"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:paddingRight="@dimen/_15sdp"
+        android:paddingBottom="@dimen/_15sdp"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/txtRequirements"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Requirements"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center"
+            android:textSize="@dimen/_20sdp"
+            android:textStyle="bold"/>
+
+        <View android:id="@+id/titleDivider"
+            android:layout_width="match_parent"
+            android:layout_height="4dip"
+            android:background="@drawable/menubutton"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"
+            android:id="@+id/txtDirection"
+            android:gravity="center"
+            android:text="direction"
+            android:textSize="@dimen/_20sdp"
+            android:textColor="@android:color/white"/>
+
+        <Button
+            android:padding="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_15sdp"
+            android:layout_marginLeft="@dimen/_15sdp"
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/wrongbutton"
+            android:layout_marginTop="10dp"
+            android:textSize="@dimen/_25sdp"
+            android:text="OK"
+            android:layout_weight="0.06" />
+    </LinearLayout>
+</RelativeLayout>

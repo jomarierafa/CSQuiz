@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:splitMotionEvents="false"
+    android:background="@drawable/background2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_25sdp">
+            <TextView
+                android:id="@+id/questionLeft"
+                android:textSize="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+                <ImageView
+                    android:id="@+id/timerIcon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_timer" />
+                <TextView
+                    android:id="@+id/timer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45"
+                    android:textSize="@dimen/_20sdp"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:padding="@dimen/_5sdp"
+                android:id="@+id/question"
+                android:layout_weight="1"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="@string/question"
+                android:textSize="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:background="@drawable/customtextview"
+                android:textColor="@android:color/white" />
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:splitMotionEvents="false"
+                android:layout_weight="1">
+
+                <Button
+                    android:background="@drawable/menubutton"
+                    android:id="@+id/choice1"
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:layout_height="0px"
+                    android:layout_width="match_parent"
+                    android:onClick="choose"
+                    android:text="@string/a" />
+
+                <Button
+                    android:background="@drawable/menubutton"
+                    android:id="@+id/choice2"
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0px"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:onClick="choose"
+                    android:text="@string/b" />
+
+                <Button
+                    android:background="@drawable/menubutton"
+                    android:id="@+id/choice3"
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0px"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:onClick="choose"
+                    android:text="@string/c" />
+                <Button
+                    android:background="@drawable/menubutton"
+                    android:id="@+id/choice4"
+                    android:textSize="@dimen/_20sdp"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="0px"
+                    android:onClick="choose"
+                    android:text="@string/d" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:splitMotionEvents="false"
+        android:id="@+id/viewLifeline"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:paddingLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_30sdp">
+        <ImageButton
+            android:visibility="invisible"
+            android:id="@+id/doubleTip"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:layout_height="match_parent"
+            android:background="@drawable/lifelinebutton"
+            android:contentDescription="@string/tapicon"
+            android:onClick="doubleTip"
+            android:src="@drawable/ic_tap_button"
+            android:padding="@dimen/_8sdp"
+            android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:visibility="invisible"
+            android:id="@+id/half"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:layout_height="match_parent"
+            android:background="@drawable/lifelinebutton"
+            android:onClick="twoChoices"
+            android:src="@drawable/ic_minus2"
+            android:padding="@dimen/_8sdp"
+            android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:visibility="invisible"
+            android:id="@+id/correctAns"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:background="@drawable/lifelinebutton"
+            android:onClick="corectAns"
+            android:src="@drawable/ic_check"
+            android:padding="@dimen/_8sdp"
+            android:scaleType="fitXY"/>
+
+        <ImageButton
+            android:visibility="invisible"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:background="@drawable/lifelinebutton"
+            android:onClick="mTimerOff"
+            android:src="@drawable/ic_timer_off_"
+           android:id="@+id/mTimerOff"
+            android:padding="@dimen/_8sdp"
+            android:scaleType="fitXY"/>
+    </LinearLayout>
+</RelativeLayout>

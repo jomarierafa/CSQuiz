@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="@dimen/_10sdp"
+    android:paddingLeft="@dimen/_10sdp"
+    android:background="@drawable/background2">
+
+    <Switch
+        android:id="@+id/swtMusic"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:text="Music"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/_35sdp"
+        android:checked="true"/>
+
+    <Switch
+        android:id="@+id/swtSound"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_50sdp"
+        android:text="Sounds"
+        android:textColor="@color/color1"
+        android:textSize="@dimen/_35sdp" />
+</LinearLayout>

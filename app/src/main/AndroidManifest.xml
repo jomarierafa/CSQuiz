@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.jomarie.csquiz">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH_PRIVILEGED" />
+
+    <supports-screens
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true"
+        android:xlargeScreens="true" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/iconlogo"
+        android:label="CSQuiz"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".LauncherScreen"
+            android:noHistory="true"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".quickgame"
+            android:label="Normal Mode"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".normalgame"
+            android:label="Select Courses"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".gameMode"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".quickThree"
+            android:label="QuickGame Mode"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".timeLimit"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DualPlayerMultiple"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".leaderboard.Leaderboard"
+            android:label="@string/title_activity_leaderboard"
+            android:launchMode="singleTask"
+            android:screenOrientation="landscape"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <service android:name=".sounds.backgroundmusic" />
+        <service android:name=".sounds.thinkingmusic" />
+        <service android:name=".sounds.thinking" />
+
+        <activity
+            android:name=".Settings"
+            android:label="Settings"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DualplayerWinner"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".LoadingScreen"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".bluetooth.BluetoothActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".FillInTheBlank"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".VerifyingMode"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".FillTime"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".VerTime"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".randomTime"
+            android:screenOrientation="landscape" />
+        <activity android:name=".leaderboard.LBAll" />
+        <activity
+            android:name=".HelpDesk"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".DualPlayerVer"
+            android:screenOrientation="landscape" />
+    </application>
+
+</manifest>

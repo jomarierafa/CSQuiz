@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:splitMotionEvents="false"
+    android:background="@drawable/background2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_25sdp">
+            <TextView
+                android:id="@+id/vquestionLeft"
+                android:textSize="@dimen/_20sdp"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true">
+                <ImageView
+                    android:id="@+id/vtimerIcon"
+                    android:layout_width="@dimen/_25sdp"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_timer" />
+                <TextView
+                    android:id="@+id/verTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="45"
+                    android:textSize="@dimen/_20sdp"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </RelativeLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:padding="@dimen/_5sdp"
+                android:textColor="@android:color/white"
+                android:text="@string/question"
+                android:gravity="center"
+                android:textSize="@dimen/_20sdp"
+                android:id="@+id/verQuestion"
+                android:background="@drawable/customtextview"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_weight="1"/>
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:orientation="vertical"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:paddingBottom="@dimen/_15sdp">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="2">
+                    <TextView
+                        android:visibility="invisible"
+                        android:id="@+id/correctWord"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Correct Answer"
+                        android:textColor="@color/color3"
+                        android:textSize="@dimen/_20sdp" />
+                    <TextView
+                        android:id="@+id/givenWord"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Given Answer"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_20sdp" />
+                </RelativeLayout>
+
+                <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0px"
+                    android:orientation="vertical"
+                    android:layout_weight="3"
+                    android:layout_marginBottom="@dimen/_10sdp">
+                    <RadioButton
+                        android:id="@+id/correct"
+                        android:checked="true"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:text=" TRUE"
+                        android:textSize="@dimen/_25sdp"/>
+                    <RadioButton
+                        android:id="@+id/incorrect"
+                        android:layout_width="match_parent"
+                        android:layout_height="0px"
+                        android:layout_weight="1"
+                        android:text=" FALSE"
+                        android:textSize="@dimen/_25sdp"/>
+                </RadioGroup>
+
+                <Button
+                    android:textColor="@android:color/white"
+                    android:id="@+id/submitVer"
+                    android:layout_width="match_parent"
+                    android:layout_height="0px"
+                    android:layout_weight="2"
+                    android:background="@drawable/menubutton"
+                    android:onClick="submit"
+                    android:text="Submit"
+                    android:textSize="@dimen/_20sdp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/verLifelines"
+        android:splitMotionEvents="false"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:paddingLeft="@dimen/_25sdp"
+        android:layout_marginTop="@dimen/_30sdp">
+
+        <ImageButton
+            android:visibility="invisible"
+            android:id="@+id/seeChoices"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:background="@drawable/lifelinebutton"
+            android:contentDescription="@string/tapicon"
+            android:onClick="seeChoices"
+            android:padding="@dimen/_8sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_list" />
+
+        <ImageButton
+            android:visibility="invisible"
+            android:id="@+id/verDoubleTry"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:background="@drawable/lifelinebutton"
+            android:onClick="doubleTry"
+            android:padding="@dimen/_8sdp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_tap_button" />
+
+        <ImageButton
+            android:visibility="invisible"
+            android:id="@+id/verCorrectAns"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:background="@drawable/lifelinebutton"
+            android:onClick="correctAnswer"
+            android:src="@drawable/ic_check"
+            android:padding="@dimen/_8sdp"
+            android:scaleType="fitXY" />
+        <ImageButton
+            android:visibility="invisible"
+            android:id="@+id/verTimerOff"
+            android:layout_width="@dimen/_40sdp"
+            android:layout_height="match_parent"
+            android:background="@drawable/lifelinebutton"
+            android:onClick="timerStop"
+            android:src="@drawable/ic_timer_off_"
+            android:padding="@dimen/_8sdp"
+            android:scaleType="fitXY" />
+    </LinearLayout>
+
+</RelativeLayout>
